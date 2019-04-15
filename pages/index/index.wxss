@@ -78,3 +78,110 @@
   height: 15px;
   /* border: 1rpx solid #e6e6ea; */
 }
+
+.title-line{
+  width: 100%;
+  padding: 20rpx;
+  font-size:25rpx; 
+  border: 1rpx solid #e6e6ea;
+}
+
+.card{
+  position: relative;
+  padding: 20rpx;
+  border: 1rpx solid #e6e6ea;
+}
+
+.card-category{
+  display: block;
+  font-size:30rpx; 
+}
+
+.card-content{
+  display: block;
+  font-size:20rpx; 
+  width: 500rpx;
+  margin-top: 40rpx;
+  margin-bottom: 20rpx;
+}
+
+.card-price{
+  font-size:20rpx; 
+}
+
+.card-price_num{
+  padding: 10rpx;
+  font-size:20rpx; 
+}
+
+.card-price_cny{
+  font-size:20rpx; 
+}
+
+.card-label{
+  position: absolute;
+  width: 70%;
+  right: 10rpx; 
+  top: 10rpx;
+  font-size:18rpx; 
+  /* border: 1rpx solid #0606f8; */
+}
+.card-label-item{
+  float: right;
+  padding: 10rpx;
+  margin: 7rpx;
+  border: 1rpx solid #e6e6ea;
+  border-radius: 4px;
+  font-size:18rpx; 
+}
+
+
+.card-status-label{
+  position: absolute;
+  bottom: 80rpx;right: 50rpx;
+  padding: 10rpx;
+  border: 1rpx solid #e6e6ea;
+  border-radius: 4px;
+  background: rgb(85, 185, 76);
+  font-size:18rpx;
+}
+
+.card-status-toright{
+  position: absolute;
+  bottom: 80rpx; right: 0px; 
+  width: 25px;
+  height: 25px;
+}
+
+.card-members{
+  position: absolute;
+  width: 70%;
+  height: 50rpx;
+  right: 20rpx; 
+  bottom: 10rpx;
+  font-size:18rpx; 
+  /* border: 1rpx solid #0606f8; */
+}
+
+.card-members-text{
+  margin-top:10rpx; 
+  float: right;
+  font-size:18rpx;
+  /* border: 1rpx solid #0606f8; */
+}
+
+.card-members-avatars{
+  float: right;
+}
+
+.card-members-avatars-item{
+  height: 50rpx;
+  width: 50rpx;
+  float: right;
+}
+
+.card-members-count{
+  margin-top:10rpx; 
+  font-size:20rpx;
+  float: right;
+}
