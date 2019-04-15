@@ -9,20 +9,26 @@
 </view>
 
 <scroll-view class="scroll_containner" scroll-x="true" >
-  <view class="scroll_item">
-    <view class='scroll_item_box'>
-      <!-- <view class='scroll_item_box_textview'>
-        <view class='scroll_item_box_textview_1'>需求发布</view>
-        <view class='scroll_item_box_textview_1'>寻找心仪的竞标解决方案</view>
-      </view>
-      <view class='scroll_item_box_iconview'></view> -->
+  <view class='scroll_item_box'>
+    <view class='scroll_item_box_textview'>
+      <text class='scroll_item_box_textview_1'>咨询模式</text>
+      <text class='scroll_item_box_textview_2'>分析师广场\n直接选择心仪的分析师</text>
     </view>
+    <image class='scroll_item_box_iconview' src='../../images/toright_64.png'></image>
   </view>
-  <view class="scroll_item">
-    <view class='scroll_item_box'></view>
+  <view class='scroll_item_box'>
+    <view class='scroll_item_box_textview'>
+      <text class='scroll_item_box_textview_1'>竞标模式</text>
+      <text class='scroll_item_box_textview_2'>需求发布\n寻求心仪的解决方案</text>
+    </view>
+    <image class='scroll_item_box_iconview' src='../../images/toright_64.png'></image>
   </view>
-  <view class="scroll_item">
-    <view class='scroll_item_box'></view>
+  <view class='scroll_item_box'>
+    <view class='scroll_item_box_textview'>
+      <text class='scroll_item_box_textview_1'>更多</text>
+      <text class='scroll_item_box_textview_2'>敬请期待...</text>
+    </view>
+    <image class='scroll_item_box_iconview' src='../../images/toright_64.png'></image>
   </view>
 </scroll-view>
 
