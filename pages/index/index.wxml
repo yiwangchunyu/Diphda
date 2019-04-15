@@ -8,6 +8,24 @@
   </view>
 </view>
 
+<scroll-view class="scroll_containner" scroll-x="true" >
+  <view class="scroll_item">
+    <view class='scroll_item_box'>
+      <!-- <view class='scroll_item_box_textview'>
+        <view class='scroll_item_box_textview_1'>需求发布</view>
+        <view class='scroll_item_box_textview_1'>寻找心仪的竞标解决方案</view>
+      </view>
+      <view class='scroll_item_box_iconview'></view> -->
+    </view>
+  </view>
+  <view class="scroll_item">
+    <view class='scroll_item_box'></view>
+  </view>
+  <view class="scroll_item">
+    <view class='scroll_item_box'></view>
+  </view>
+</scroll-view>
+
 <view class="container">
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>

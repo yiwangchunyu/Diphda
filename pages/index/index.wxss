@@ -20,3 +20,31 @@
 .usermotto {
   margin-top: 200px;
 }
+
+.scroll_containner{
+  white-space: nowrap; 
+  display: flex;
+  height: 100px; 
+}
+
+.scroll_item{
+  background: #efeff4; 
+  width: 130px; 
+  height: 100%; 
+  display: inline-block;
+  /* border: 1rpx solid #e6e6ea; */
+  padding: 3%;
+}
+
+.scroll_item_box{
+  padding: 10px;
+  background: #ffffff; 
+  width: 100%; 
+  height: 55%;
+  border: 1rpx solid #e6e6ea;
+}
+
+.scroll_item_box_textview{
+  position: relative;
+  
+}
