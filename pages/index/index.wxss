@@ -47,7 +47,7 @@
   width: 95px;
   height: 55px;
   padding: 5px;
-  line-height:20rpx;
+  line-height: 20rpx;
   /* display: inline-block; */
   /* border: 1rpx solid #e6e6ea; */
 }
@@ -103,6 +103,7 @@
   width: 500rpx;
   margin-top: 40rpx;
   margin-bottom: 20rpx;
+  line-height: 40rpx;
 }
 
 .card-price{

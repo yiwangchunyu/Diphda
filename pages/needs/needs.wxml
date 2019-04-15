@@ -1,2 +1,111 @@
-<!--pages/needs/needs.wxml-->
-<text>pages/needs/needs.wxml</text>
+<!--needs.wxml-->
+<view class="weui-search-bar">
+  <view class="weui-search-bar__form">
+    <view class="weui-search-bar__box">
+      <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+      <input type="text" class="weui-search-bar__input" placeholder="搜索"/>
+    </view>
+  </view>
+</view>
+
+<view class='title-line'>咨询需求：</view>
+
+<view class='card'>
+  <text class='card-category'>需求类别</text>
+  <text class='card-content'>说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字</text>
+  <text class='card-price'>心理价位：</text>
+  <text class='card-price_num'>200</text>
+  <text class='card-price_cny'>¥</text>
+  <text class='card-price'>\n心理价位：</text>
+  <text class='card-price_num'>200</text>
+  <text class='card-price_cny'>¥</text>
+
+  <view class='card-label'>
+    <label class='card-label-item'>R语言</label>
+    <label class='card-label-item'>python</label>
+  </view>
+  <label class='card-status-label'>竞标中</label>
+  <image class='card-status-toright' src='../../images/toright_64.png'></image>
+
+  <view class='card-members'>
+    <text class='card-members-count'>3人</text>
+    <view class='card-members-avatars'>
+      <image class='card-members-avatars-item' src='../../images/mine_fill_64.png'></image>
+      <image class='card-members-avatars-item' src='../../images/mine_fill_64.png'></image>
+      <image class='card-members-avatars-item' src='../../images/mine_fill_64.png'></image>
+    </view>
+    <text class='card-members-text'>参与竞标：</text>
+  </view>
+</view>
+
+<view class='card'>
+  <text class='card-category'>需求类别</text>
+  <text class='card-content'>说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字</text>
+  <text class='card-price'>心理价位：</text>
+  <text class='card-price_num'>200</text>
+  <text class='card-price_cny'>¥</text>
+
+  <view class='card-label'>
+    <label class='card-label-item'>R语言</label>
+    <label class='card-label-item'>python</label>
+  </view>
+  <label class='card-status-label'>已成单</label>
+  <image class='card-status-toright' src='../../images/toright_64.png'></image>
+
+  <view class='card-members'>
+    <text class='card-members-count'>1人</text>
+    <view class='card-members-avatars'>
+      <image class='card-members-avatars-item' src='../../images/mine_fill_64.png'></image>
+    </view>
+    <text class='card-members-text'>分析师：</text>
+  </view>
+</view>
+
+<view class='card'>
+  <text class='card-category'>需求类别</text>
+  <text class='card-content'>说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字</text>
+  <text class='card-price'>心理价位：</text>
+  <text class='card-price_num'>200</text>
+  <text class='card-price_cny'>¥</text>
+
+  <view class='card-label'>
+    <label class='card-label-item'>R语言</label>
+    <label class='card-label-item'>python</label>
+  </view>
+  <label class='card-status-label'>已成单</label>
+  <image class='card-status-toright' src='../../images/toright_64.png'></image>
+
+  <view class='card-members'>
+    <text class='card-members-count'>2人</text>
+    <view class='card-members-avatars'>
+      <image class='card-members-avatars-item' src='../../images/mine_fill_64.png'></image>
+      <image class='card-members-avatars-item' src='../../images/mine_fill_64.png'></image>
+    </view>
+    <text class='card-members-text'>参与竞标：</text>
+  </view>
+</view>
+
+<view class='card'>
+  <text class='card-category'>需求类别</text>
+  <text class='card-content'>说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字</text>
+  <text class='card-price'>心理价位：</text>
+  <text class='card-price_num'>200</text>
+  <text class='card-price_cny'>¥</text>
+
+  <view class='card-label'>
+    <label class='card-label-item'>R语言</label>
+    <label class='card-label-item'>python</label>
+  </view>
+  <label class='card-status-label'>已成单</label>
+  <image class='card-status-toright' src='../../images/toright_64.png'></image>
+
+  <view class='card-members'>
+    <text class='card-members-count'>2人</text>
+    <view class='card-members-avatars'>
+      <image class='card-members-avatars-item' src='../../images/mine_fill_64.png'></image>
+      <image class='card-members-avatars-item' src='../../images/mine_fill_64.png'></image>
+    </view>
+    <text class='card-members-text'>参与竞标：</text>
+  </view>
+</view>
+
