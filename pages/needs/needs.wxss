@@ -1,1 +1,14 @@
 @import "../index/index.wxss";
+
+.card-label-msgcount{
+  background: orange;
+  float: right;
+  margin: 7rpx;
+  height: 33rpx;
+  width: 33rpx;
+  text-align: center;
+  vertical-align: middle;
+  border: 1rpx solid #e6e6ea;
+  border-radius: 50%;
+  font-size:18rpx;
+}

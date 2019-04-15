@@ -38,7 +38,7 @@
   display: inline-block;
   vertical-align:top; 
   border: 1rpx solid #e6e6ea;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
 .scroll_item_box_textview{
@@ -86,10 +86,16 @@
   border: 1rpx solid #e6e6ea;
 }
 
+.card-container{
+  padding: 5rpx;
+  background:  #e6e6ea;
+}
 .card{
+  background: white;
   position: relative;
   padding: 20rpx;
   border: 1rpx solid #e6e6ea;
+  border-radius: 10px;
 }
 
 .card-category{
