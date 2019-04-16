@@ -1,13 +1,11 @@
-// pages/need_detail/need_detail.js
+// pages/solution_detail/solution_detail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    labels: ['python', '因子分析', 'python', 'R语言', '因子分析', 'python', 'R语言', '因子分析'],
-    content:'需求内容需求内容需求内容需求内容需求内容需求内容需求内容需求内容需求内容需求内容需求内容需求内容需求内容需求内容需求内容需求内容',
-    price:2000
+
   },
 
   /**
@@ -64,10 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  solutionCardOnClick: function(e) {
-    wx.navigateTo({
-      url: '../solution_detail/solution_detail',
-    })
   }
 })

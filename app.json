@@ -6,7 +6,8 @@
     "pages/needs/needs",
     "pages/login/login",
     "pages/needs_publish/needs_publish",
-    "pages/need_detail/need_detail"
+    "pages/need_detail/need_detail",
+    "pages/solution_detail/solution_detail"
   ],
   "window": {
     "backgroundTextStyle": "light",

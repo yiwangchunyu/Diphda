@@ -35,7 +35,7 @@
 <view class='title-line'>订单广场</view>
 
 <view class='card-container'>
-  <view class='card'>
+  <view class='card' bindtap='cardOnClick'>
     <text class='card-category'>需求类别</text>
     <text class='card-content'>说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字</text>
     <text class='card-price'>心理价位：</text>

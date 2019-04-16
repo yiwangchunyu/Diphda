@@ -1,2 +1,54 @@
 <!--pages/need_detail/need_detail.wxml-->
-<text>pages/need_detail/need_detail.wxml</text>
+<view class='title-view'>
+  <view class='title-line'>需求</view>
+  <label class='title-status-lable'>竞标中</label>
+</view>
+<view class='labels-view'>
+  <label wx:for="{{labels}}" wx:key="{{item}}" class="labels-lines">
+  <label class="babel-center-item">{{item}}</label>
+</label>
+</view>
+<view class='content-view'>
+  <text class='content-text'>{{content}}</text>
+</view>
+<view class='text-line-white'>
+  <text class='text-line-white-price'>心理价位：</text>
+  <text class='text-line-white-price'>{{price}}</text>
+  <text class='text-line-white-pricecny'>¥</text>
+</view>
+<view class='text-line'>参与竞标：</view>
+
+<view class='solution-card-container'>
+  <view class='solution-card' bindtap='solutionCardOnClick'>
+    <view class='solution-card-user'>
+      <image class='solution-card-user-avatar' src='../../images/mine_fill_64.png'></image>
+      <text class='solution-card-user-nickname'>壹汪春雨</text>
+      <label class='solution-card-user-stars'>五星</label>
+      <label class='solution-card-user-edu'>本科</label>
+      <label class='solution-card-user-orders'>成交15单</label>
+    </view>
+    <view class='solution-card-content-view'>
+      <text class='solution-card-content'> 解决方案解决方案解决方案解决方案解决方案解决方案解决方案解决方案解决方案解决方案解决方案解决方案解决方案解决方案解决方案解决方</text>
+    </view>
+    <view class='solution-card-quote'>报价：1500 ¥</view>
+    <image class='solution-card-toright' src='../../images/toright_64.png'></image>
+  </view>
+
+  <view class='solution-card'>
+    <view class='solution-card-user'>
+      <image class='solution-card-user-avatar' src='../../images/mine_fill_64.png'></image>
+      <text class='solution-card-user-nickname'>壹汪春雨</text>
+      <label class='solution-card-user-stars'>五星</label>
+      <label class='solution-card-user-edu'>本科</label>
+      <label class='solution-card-user-orders'>成交15单</label>
+    </view>
+  <view class='solution-card-content-view'>
+    <text class='solution-card-content'> 解决方案解决方案解决方案解决方案解决方案解决方案解决方案解决方案解决方案解决方案解决方案</text>
+  </view>
+  <view class='solution-card-quote'>报价：1500 ¥</view>
+  <image class='solution-card-toright' src='../../images/toright_64.png'></image>
+  </view>
+
+
+</view>
+

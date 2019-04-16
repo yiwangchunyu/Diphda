@@ -55,5 +55,10 @@ Page({
     wx.navigateTo({
       url: '../needs_publish/needs_publish',
     })
+  },
+  cardOnClick: function(e){
+    wx.navigateTo({
+      url: '../need_detail/need_detail',
+    })
   }
 })
