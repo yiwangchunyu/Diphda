@@ -16,7 +16,7 @@
     </view>
     <image class='scroll_item_box_iconview' src='../../images/toright_64.png'></image>
   </view>
-  <view class='scroll_item_box'>
+  <view class='scroll_item_box'  bindtap='link_to_publisher'>
     <view class='scroll_item_box_textview'>
       <text class='scroll_item_box_textview_1'>竞标模式</text>
       <text class='scroll_item_box_textview_2'>需求发布\n寻求心仪的解决方案</text>

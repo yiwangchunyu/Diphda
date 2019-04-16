@@ -1,0 +1,29 @@
+<view class="container">
+  <picker bindchange="bindPickerChange" value="{{category_index}}" range="{{categories}}">
+    <view class="picker">
+      <view class="fb-type">
+        <view class="type-label">{{categories[category_index]}}</view>
+        <image class="type-icon" src="../../images/tobottom.png"></image>
+
+      </view>
+    </view>
+  </picker>
+  <view class="fb-body">
+    <textarea class="content" placeholder="您的需求详细的描述请写在这里..." />
+    <view class="text-count">0/500</view>
+  </view>
+  
+  <view class="text-line">添加标签:</view>
+  <checkbox-group class='free-radios' bindchange="checkChange">
+    <label bindtap="click"  wx:for="{{labels}}" wx:key="{{item}}" class="free-radio">
+      <checkbox value="{{item.id}}" name="{{item.value}}" checked="{{item.checked}}" hidden='true'></checkbox>
+      <label class="free-text  {{item.checked?'is_checked':''}}">{{item.value}}</label>
+    </label>
+  </checkbox-group>
+
+  <view class="text-line">心理价位:</view>
+  <input class="line-input" type='digit' placeholder="输入心理价位（如：2000）单位：RMB" />
+
+  <button class="fb-btn-reset">重置</button>
+  <button class="fb-btn" bindtap='submitBtnClick'>提交</button>
+</view>

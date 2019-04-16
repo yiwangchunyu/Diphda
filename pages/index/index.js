@@ -50,5 +50,10 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  link_to_publisher: function(e) {
+    wx.navigateTo({
+      url: '../needs_publish/needs_publish',
+    })
   }
 })

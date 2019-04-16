@@ -4,7 +4,9 @@
     "pages/logs/logs",
     "pages/mine/mine",
     "pages/needs/needs",
-    "pages/login/login"
+    "pages/login/login",
+    "pages/needs_publish/needs_publish",
+    "pages/need_detail/need_detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
