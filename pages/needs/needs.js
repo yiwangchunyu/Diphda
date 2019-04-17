@@ -62,5 +62,10 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  cardOnClick: function (e) {
+    wx.navigateTo({
+      url: '../need_detail/need_detail',
+    })
   }
 })
