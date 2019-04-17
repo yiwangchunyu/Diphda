@@ -1,0 +1,104 @@
+/* pages/analyst_profile/analyst_profile.wxss */
+page{
+    background: #f4f4f4;
+}
+.title-bar{
+  background: white;
+  width: 100%;
+  padding: 10rpx;
+  text-align: center;
+}
+
+.user-view{
+  display: flex;
+  align-items: center;
+  background: white;
+  width: 100%;
+}
+
+.user-avatar{
+  width: 100rpx;
+  height: 100rpx;
+
+}
+
+.user-nickname{
+
+}
+.user-labels{
+width: 100%;
+background: white;
+display: flex;
+align-items: center;
+/* justify-content: center; */
+}
+.user-labels-item{
+  padding: 10rpx;
+  margin: 10rpx;
+  font-size: 25rpx;
+  border: 1rpx solid #e6e6ea;
+  border-radius: 10rpx;
+}
+.user-ext{
+  background: white;
+  width: 100%;
+  padding: 10rpx;
+  font-size: 30rpx;
+}
+.user-stars{
+  margin: 30rpx;
+}
+.user-edu{
+  margin: 30rpx;
+}
+.user-orders{
+  margin: 30rpx;
+}
+.user-resume{
+  background: white;
+  padding: 10rpx;
+  border: 1rpx solid #e6e6ea;
+}
+
+.user-resum-title{
+  background: white;
+  width: 100%;
+  padding: 10rpx;
+  color: rgb(66, 66, 66);
+  font-size: 27rpx;
+}
+.user-resume-content{
+  background: white;
+  padding: 20rpx;
+  font-size: 25rpx;
+  line-height: 40rpx;
+  color: #7f7f7f;
+}
+
+.analyst-stat{
+  background: white;
+  padding: 10rpx;
+ width: 100%;
+ height: 400rpx;
+}
+
+.analyst-stat-title{
+  background: white;
+  width: 100%;
+  padding: 10rpx;
+  color: rgb(66, 66, 66);
+  font-size: 27rpx;
+}
+
+.btn{
+  width: 100%;
+  height: 98rpx;
+  line-height: 98rpx;
+  background: #5cce39;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border-radius: 0;
+  color: #fff;
+  font-size: 28rpx;
+}

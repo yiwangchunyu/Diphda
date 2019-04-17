@@ -1,0 +1,49 @@
+<!--pages/analyst_plaza/analyst_plaza.wxml-->
+<view class='title-bar'>分析师广场</view>
+<view class='sizer-view'>
+  <view class='sizer-item'>评分</view>
+  <view class='sizer-item'>星级</view>
+  <view class='sizer-item'>订单数</view>
+</view>
+<view class='solution-card-view'>
+<view class='solution-card' bindtap='analystCardOnClick'>
+    <view class='solution-card-user'>
+      <image class='solution-card-user-avatar' src='../../images/mine_fill_64.png'></image>
+      <text class='solution-card-user-nickname'>壹汪春雨</text>
+      <label class='solution-card-user-stars'>五星</label>
+      <label class='solution-card-user-edu'>本科</label>
+      <label class='solution-card-user-orders'>成交15单</label>
+    </view>
+    <view class='solution-card-content-view'>
+      <text class='solution-card-content'> 个人介绍个人介绍个人介绍个人介绍个人介绍</text>
+    </view>
+    <view class='labels-view'>
+      <label class="labels-lines">
+        <label class="babel-center-item">matlab</label>
+        <label class="babel-center-item">matlab</label>
+      </label>
+    </view>
+    <image class='solution-card-toright' src='../../images/toright_64.png'></image>
+  </view>
+
+  <view class='solution-card' bindtap='analystCardOnClick'>
+    <view class='solution-card-user'>
+      <image class='solution-card-user-avatar' src='../../images/mine_fill_64.png'></image>
+      <text class='solution-card-user-nickname'>壹汪春雨</text>
+      <label class='solution-card-user-stars'>五星</label>
+      <label class='solution-card-user-edu'>本科</label>
+      <label class='solution-card-user-orders'>成交15单</label>
+    </view>
+    <view class='solution-card-content-view'>
+      <text class='solution-card-content'> 个人介绍个人介绍个人介绍个人介绍个人介绍</text>
+    </view>
+    <view class='labels-view'>
+      <label class="labels-lines">
+        <label class="babel-center-item">matlab</label>
+        <label class="babel-center-item">matlab</label>
+      </label>
+    </view>
+    <image class='solution-card-toright' src='../../images/toright_64.png'></image>
+  </view>
+  
+</view>

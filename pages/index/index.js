@@ -56,6 +56,11 @@ Page({
       url: '../needs_publish/needs_publish',
     })
   },
+  link_to_analyst_plaza:function(e){
+    wx.navigateTo({
+      url: '../analyst_plaza/analyst_plaza',
+    })
+  },
   cardOnClick: function(e){
     wx.navigateTo({
       url: '../need_detail/need_detail',

@@ -8,7 +8,7 @@
   </view>
 </view>
 
-<scroll-view class="scroll_containner" scroll-x="true" >
+<scroll-view class="scroll_containner" bindtap='link_to_analyst_plaza' scroll-x="true" >
   <view class='scroll_item_box'>
     <view class='scroll_item_box_textview'>
       <text class='scroll_item_box_textview_1'>咨询模式</text>

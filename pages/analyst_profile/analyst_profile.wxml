@@ -1,0 +1,28 @@
+<!--pages/analyst_profile/analyst_profile.wxml-->
+<view class='title-bar'>分析师详情</view>
+<view class='user-view'>
+  <image class='user-avatar' src='../../images/mine_fill_64.png'></image>
+  <text class='user-nickname'>壹汪春雨</text>
+</view>
+<view class='user-labels'>
+  <label class='user-labels-item'>R语言</label>
+  <label class='user-labels-item'>R语言</label>
+</view>
+<view class='user-ext'>
+  <text class='user-stars'>5星</text>
+  <text class='user-edu'>本科</text>
+  <text class='user-orders'>成交45单</text>
+</view>
+<view class='user-resume'>
+  <view class='user-resum-title'>个人简介：</view>
+  <text class='user-resume-content'>这里是个人简介这里是个人简介这里是个人简介这里是个人简介这里是个人简介这里是个人简介这里是个人简介</text>
+</view>
+<view class='analyst-stat'>
+  <text class='analyst-stat-title'>订单统计：</text>
+</view>
+<view class='analyst-stat'>
+  <text class='analyst-stat-title'>订单评价：</text>
+</view>
+
+
+<button class='btn' bindtap='btnOnClick'>向Ta提交订单</button>
