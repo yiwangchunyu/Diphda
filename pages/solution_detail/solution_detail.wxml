@@ -1,2 +1,44 @@
 <!--pages/solution_detail/solution_detail.wxml-->
-<text>pages/solution_detail/solution_detail.wxml</text>
+<view class='title-bar'>方案详情</view>
+<view class='text-line'>需求方：</view>
+<view class='user-a'>
+  <image class='user-avatar' src='../../images/mine_fill_64.png'></image>
+  <text class='user-nickname'>壹汪春雨</text>
+</view>
+<view class='need-title'>
+  <text class='need-category'>需求Y</text>
+  <label class='labels-container'>
+    <label class='labels-item'>R语言</label>
+    <label class='labels-item'>R语言</label>
+  </label>
+</view>
+<view class='text-line-small'>需求明细：</view>
+<view class='need-content-view'>
+  <text class='need-content'>说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明</text>
+</view>
+<view class='need-content-price'>心理价位：1500 ¥</view>
+<view class='line-split'></view>
+<view class='text-line'>竞标分析师：</view>
+<view class='solution-card-user'>
+  <image class='solution-card-user-avatar' src='../../images/mine_fill_64.png'></image>
+  <text class='solution-card-user-nickname'>壹汪春雨</text>
+  <label class='solution-card-user-stars'>五星</label>
+  <label class='solution-card-user-edu'>本科</label>
+  <label class='solution-card-user-orders'>成交15单</label>
+</view>
+<view class='labels-view'>
+  <label class="labels-lines">
+    <label class="babel-center-item">matlab</label>
+    <label class="babel-center-item">matlab</label>
+  </label>
+</view>
+<view class='text-line-small'>解决方案提要：</view>
+<view class='need-content-view'>
+  <text class='need-content'>说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明</text>
+</view>
+<view class='solution-content-price'>报价：1500 ¥</view>
+
+<view class='bottom-button'>
+<button class='btn-consult' type='default'>咨询详情</button>
+<button class='btn-accept'type='primary'>接受方案</button>
+</view>

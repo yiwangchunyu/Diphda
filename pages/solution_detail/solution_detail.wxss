@@ -1,1 +1,168 @@
 /* pages/solution_detail/solution_detail.wxss */
+page{
+    background: white;
+}
+.title-bar{
+  background: white;
+  width: 100%;
+  padding: 10rpx;
+  text-align: center;
+}
+.text-line{
+  background: white;
+  width: 100%;
+  padding: 10rpx;
+  color: rgb(122, 122, 122);
+  font-size: 35rpx;
+}
+
+.user-a{
+  display: flex;
+  align-items: center;
+  background: white;
+  width: 100%;
+
+}
+
+.user-avatar{
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.user-nickname{
+  font-size: 40rpx;
+}
+
+.need-title{
+  padding: 10rpx;
+  background: white;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.need-category{
+  margin: 10rpx;
+  font-size: 35rpx;
+}
+
+.labels-container{
+
+}
+
+.labels-item{
+  margin-left: 10rpx;
+  font-size: 20rpx;
+  border: 1rpx solid #e6e6ea;
+  border-radius: 10rpx;
+}
+
+.need-content-view{
+  background: white;
+  padding: 20rpx;
+  font-size: 25rpx;
+  line-height: 40rpx;
+  color: #7f7f7f;
+}
+
+.need-content{
+
+}
+
+.need-content-price{
+  padding: 20rpx;
+  font-size: 25rpx;
+  background: white;
+}
+
+.line-split{
+  width: 100%;
+  height: 1px;
+  background: #e6e6ea;
+}
+
+.solution-card-user{
+  background: white;
+  padding: 10rpx;
+  display: flex;
+  align-items:center;
+}
+
+.solution-card-user-avatar{
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.solution-card-user-nickname{
+  font-size: 40rpx;
+}
+
+.solution-card-user-stars{
+  margin-left: 10rpx;
+  font-size: 20rpx;
+  border: 1rpx solid #e6e6ea;
+  border-radius: 10rpx;
+}
+
+.solution-card-user-edu{
+  margin-left: 10rpx;
+  font-size: 20rpx;
+  border: 1rpx solid #e6e6ea;
+  border-radius: 10rpx;
+}
+
+.solution-card-user-orders{
+  margin-left: 10rpx;
+  font-size: 20rpx;
+border: 1rpx solid #e6e6ea;
+  border-radius: 10rpx;
+}
+
+.labels-view{
+  width: 100%;
+  line-height: 60rpx;
+  background: white;
+}
+.labels-lines{
+  line-height: 60rpx;
+}
+.babel-center-item{
+  font-size: 22rpx;
+  color: #7f7f7f;
+  text-align: center;
+  margin-left: 20rpx;
+  padding: 10rpx;
+  border: 1rpx solid #e6e6ea;
+  border-radius: 10rpx;
+}
+
+.text-line-small{
+  background: white;
+  width: 100%;
+  padding: 10rpx;
+  color: rgb(66, 66, 66);
+  font-size: 27rpx;
+}
+
+.solution-content-price{
+    padding: 20rpx;
+    text-align: right;
+  font-size: 25rpx;
+  background: white;
+}
+
+.bottom-button{
+  display: flex;
+  margin: 20rpx;
+}
+
+.btn-consult{
+  height: 70rpx;
+  font-size: 35rpx;
+  text-align: center;
+}
+.btn-accept{
+  height: 70rpx;
+  font-size: 35rpx;
+  text-align: center;
+}
