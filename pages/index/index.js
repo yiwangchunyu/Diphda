@@ -15,7 +15,8 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     content:"",
-    quote:""
+    quote:"",
+    needs_list:[]
   },
   //事件处理函数
   bindViewTap: function() {
@@ -58,6 +59,7 @@ Page({
   onLoad: function () {
     this.getNeedsTags();
     this.getNeedsCategories();
+    this.switchTopTabTo(1)
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -85,6 +87,10 @@ Page({
       })
     }
   },
+  onShow() {
+    this.switchTopTabTo(1)
+    // Do something when page show.
+  },
   getUserInfo: function(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
@@ -104,9 +110,12 @@ Page({
     })
   },
   cardOnClick: function(e){
-    wx.navigateTo({
-      url: '../need_detail/need_detail',
-    })
+    console.log(e)
+    var need_id=e.target.dataset.id
+    console.log(need_id)
+    // wx.navigateTo({
+    //   url: '../need_detail/need_detail?need_id='+need_id,
+    // })
   },
   /** 
   * 滑动切换tab 
@@ -124,9 +133,10 @@ Page({
     if (this.data.currentTab === e.target.dataset.current) {
       return false;
     } else {
-      that.setData({
-        currentTab: e.target.dataset.current
-      })
+      this.switchTopTabTo(e.target.dataset.current)
+      // that.setData({
+      //   currentTab: e.target.dataset.current
+      // })
     }
   },
 
@@ -212,6 +222,14 @@ Page({
       });
       return false
     }
+    if(this.data.label_ids.length>3){
+      wx.showModal({
+        title: '提示',
+        showCancel: false,
+        content: '请选择少于3个标签'
+      });
+      return false
+    }
     
     var labels=[]
     for(var i in this.data.labels){
@@ -239,6 +257,7 @@ Page({
       },
       success(res){
         that.setData({
+          currentTab: 1,  
           category_index: 0,
           labels: [],
           label_ids: [],
@@ -253,5 +272,30 @@ Page({
         })
       }
     })
+  },
+
+  //切换顶部导航栏
+  switchTopTabTo(id){
+    var that=this
+    that.setData({
+      currentTab: id
+    })
+    if(id!=0){
+      wx.request({
+        url: app.globalData.domain + '/service/needs/show',
+        data:{
+        },
+        method: 'POST',
+        header: {
+          'content-type': 'application/x-www-form-urlencoded'
+        },
+        success(res) {
+          console.log(res)
+          that.setData({
+            needs_list:res.data.data
+          })
+        }
+      })
+    }
   }
 })

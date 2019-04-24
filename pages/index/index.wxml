@@ -43,19 +43,21 @@
 <view hidden='{{currentTab==0?true:false}}'>
   <view class='title-line'>订单广场</view>
 
-  <view class='card-container'>
-    <view class='card' bindtap='cardOnClick'>
-      <text class='card-category'>需求类别</text>
-      <text class='card-content'>说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字</text>
+  <view class='card-container' wx:for="{{needs_list}}" wx:for-item="need" wx:key="need_id">
+    <view class='card' bindtap='cardOnClick'  data-id="{{need.need_id}}">
+      <text class='card-category'>{{need.category}}</text>
+      <text class='card-content'>{{need.content}}</text>
       <text class='card-price'>心理价位：</text>
-      <text class='card-price_num'>200</text>
+      <text class='card-price_num'>{{need.quote}}</text>
       <text class='card-price_cny'>¥</text>
 
-      <view class='card-label'>
-        <label class='card-label-item'>R语言</label>
-        <label class='card-label-item'>python</label>
+      <!-- <view class='card-label' wx:for="{{need.tags}}" wx:for-item="tag" wx:key="*this"> -->
+      <view class='card-label' >
+        <!-- <label class='card-label-item'>{{tag}}</label> -->
+        <label class='card-label-item'>pandas</label>
+        <label class='card-label-item'>sklearn</label>
       </view>
-      <label class='card-status-label'>竞标中</label>
+      <label class='card-status-label'>{{need.need_status}}</label>
       <image class='card-status-toright' src='../../images/toright_64.png'></image>
 
       <view class='card-members'>

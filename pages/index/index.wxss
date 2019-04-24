@@ -104,12 +104,12 @@ page{
 
 .card-category{
   display: block;
-  font-size:30rpx; 
+  font-size:35rpx; 
 }
 
 .card-content{
   display: block;
-  font-size:20rpx; 
+  font-size:30rpx; 
   width: 500rpx;
   margin-top: 40rpx;
   margin-bottom: 20rpx;
@@ -117,33 +117,32 @@ page{
 }
 
 .card-price{
-  font-size:20rpx; 
+  font-size:25rpx; 
 }
 
 .card-price_num{
   padding: 10rpx;
-  font-size:20rpx; 
+  font-size:25rpx; 
 }
 
 .card-price_cny{
-  font-size:20rpx; 
+  font-size:25rpx; 
 }
 
 .card-label{
   position: absolute;
-  width: 70%;
+  display: flex;
   right: 10rpx; 
   top: 10rpx;
-  font-size:18rpx; 
+  font-size:20rpx; 
   /* border: 1rpx solid #0606f8; */
 }
 .card-label-item{
-  float: right;
+  /* float: right; */
   padding: 10rpx;
   margin: 7rpx;
   border: 1rpx solid #e6e6ea;
   border-radius: 4px;
-  font-size:18rpx; 
 }
 
 
@@ -299,6 +298,7 @@ page{
 .bottom-button{
   display: flex;
   margin: 20rpx;
+  margin-top: 50rpx;
 }
 
 .bottom-button-left{
