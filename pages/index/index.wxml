@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class="weui-search-bar">
+<view class="weui-search-bar" hidden="{{currentTab==0?true:false}}">
   <view class="weui-search-bar__form">
     <view class="weui-search-bar__box">
       <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
@@ -8,7 +8,15 @@
   </view>
 </view>
 
-<scroll-view class="scroll_containner" bindtap='link_to_analyst_plaza' scroll-x="true" >
+<view class="swiper-tab">  
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="switchNav">发布需求</view>  
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="switchNav">初级场</view>  
+    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="switchNav">中级场</view>  
+    <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="switchNav">高级场</view>  
+</view>  
+
+
+<scroll-view class="scroll_containner" hidden='true' bindtap='link_to_analyst_plaza' scroll-x="true" >
   <view class='scroll_item_box'>
     <view class='scroll_item_box_textview'>
       <text class='scroll_item_box_textview_1'>咨询模式</text>
@@ -32,112 +40,71 @@
   </view>
 </scroll-view>
 
-<view class='title-line'>订单广场</view>
+<view hidden='{{currentTab==0?true:false}}'>
+  <view class='title-line'>订单广场</view>
 
-<view class='card-container'>
-  <view class='card' bindtap='cardOnClick'>
-    <text class='card-category'>需求类别</text>
-    <text class='card-content'>说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字</text>
-    <text class='card-price'>心理价位：</text>
-    <text class='card-price_num'>200</text>
-    <text class='card-price_cny'>¥</text>
+  <view class='card-container'>
+    <view class='card' bindtap='cardOnClick'>
+      <text class='card-category'>需求类别</text>
+      <text class='card-content'>说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字</text>
+      <text class='card-price'>心理价位：</text>
+      <text class='card-price_num'>200</text>
+      <text class='card-price_cny'>¥</text>
 
-    <view class='card-label'>
-      <label class='card-label-item'>R语言</label>
-      <label class='card-label-item'>python</label>
-    </view>
-    <label class='card-status-label'>竞标中</label>
-    <image class='card-status-toright' src='../../images/toright_64.png'></image>
-
-    <view class='card-members'>
-      <text class='card-members-count'>3人</text>
-      <view class='card-members-avatars'>
-        <image class='card-members-avatars-item' src='../../images/mine_fill_64.png'></image>
-        <image class='card-members-avatars-item' src='../../images/mine_fill_64.png'></image>
-        <image class='card-members-avatars-item' src='../../images/mine_fill_64.png'></image>
+      <view class='card-label'>
+        <label class='card-label-item'>R语言</label>
+        <label class='card-label-item'>python</label>
       </view>
-      <text class='card-members-text'>参与竞标：</text>
+      <label class='card-status-label'>竞标中</label>
+      <image class='card-status-toright' src='../../images/toright_64.png'></image>
+
+      <view class='card-members'>
+        <text class='card-members-count'>3人</text>
+        <view class='card-members-avatars'>
+          <image class='card-members-avatars-item' src='../../images/mine_fill_64.png'></image>
+          <image class='card-members-avatars-item' src='../../images/mine_fill_64.png'></image>
+          <image class='card-members-avatars-item' src='../../images/mine_fill_64.png'></image>
+        </view>
+        <text class='card-members-text'>参与竞标：</text>
+      </view>
     </view>
   </view>
 </view>
 
-<view class='card-container'>
-  <view class='card'>
-    <text class='card-category'>需求类别</text>
-    <text class='card-content'>说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字</text>
-    <text class='card-price'>心理价位：</text>
-    <text class='card-price_num'>200</text>
-    <text class='card-price_cny'>¥</text>
-
-    <view class='card-label'>
-      <label class='card-label-item'>R语言</label>
-      <label class='card-label-item'>python</label>
-    </view>
-    <label class='card-status-label'>已成单</label>
-    <image class='card-status-toright' src='../../images/toright_64.png'></image>
-
-    <view class='card-members'>
-      <text class='card-members-count'>1人</text>
-      <view class='card-members-avatars'>
-        <image class='card-members-avatars-item' src='../../images/mine_fill_64.png'></image>
+<view hidden="{{currentTab!=0?true:false}}">
+  <view class="publish-container">
+    <picker bindchange="bindPickerChange" value="{{category_index}}" range="{{categories}}">
+      <view class="picker">
+        <view class="fb-type">
+          <view class="type-label">{{categories[category_index]}}</view>
+          <image class="type-icon" src="../../images/tobottom.png"></image>
+        </view>
       </view>
-      <text class='card-members-text'>分析师：</text>
+    </picker>
+    <view class="fb-body">
+      <textarea class="content" placeholder="您的需求详细的描述请写在这里..." />
+      <view class="text-count">0/500</view>
+    </view>
+    
+    <view class="text-line-pub">添加标签:</view>
+    <checkbox-group class='free-radios' bindchange="checkChange">
+      <label bindtap="click"  wx:for="{{labels}}" wx:key="{{item}}" class="free-radio">
+        <checkbox value="{{item.id}}" name="{{item.value}}" checked="{{item.checked}}" hidden='true'></checkbox>
+        <label class="free-text  {{item.checked?'is_checked':''}}">{{item.value}}</label>
+      </label>
+    </checkbox-group>
+
+    <view class="text-line-pub">心理价位:</view>
+    <input class="line-input" type='digit' placeholder="输入心理价位（如：2000）单位：RMB" />
+
+    <view class='bottom-button'>
+    <button class='bottom-button-left' type='default'>重置</button>
+    <button class='bottom-button-right' type='primary'>提交</button>
     </view>
   </view>
 </view>
 
-<view class='card-container'>
-  <view class='card'>
-    <text class='card-category'>需求类别</text>
-    <text class='card-content'>说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字</text>
-    <text class='card-price'>心理价位：</text>
-    <text class='card-price_num'>200</text>
-    <text class='card-price_cny'>¥</text>
-
-    <view class='card-label'>
-      <label class='card-label-item'>R语言</label>
-      <label class='card-label-item'>python</label>
-    </view>
-    <label class='card-status-label'>已成单</label>
-    <image class='card-status-toright' src='../../images/toright_64.png'></image>
-
-    <view class='card-members'>
-      <text class='card-members-count'>1人</text>
-      <view class='card-members-avatars'>
-        <image class='card-members-avatars-item' src='../../images/mine_fill_64.png'></image>
-      </view>
-      <text class='card-members-text'>分析师：</text>
-    </view>
-  </view>
-</view>
-
-<view class='card-container'>
-  <view class='card'>
-    <text class='card-category'>需求类别</text>
-    <text class='card-content'>说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字</text>
-    <text class='card-price'>心理价位：</text>
-    <text class='card-price_num'>200</text>
-    <text class='card-price_cny'>¥</text>
-
-    <view class='card-label'>
-      <label class='card-label-item'>R语言</label>
-      <label class='card-label-item'>python</label>
-    </view>
-    <label class='card-status-label'>已成单</label>
-    <image class='card-status-toright' src='../../images/toright_64.png'></image>
-
-    <view class='card-members'>
-      <text class='card-members-count'>1人</text>
-      <view class='card-members-avatars'>
-        <image class='card-members-avatars-item' src='../../images/mine_fill_64.png'></image>
-      </view>
-      <text class='card-members-text'>分析师：</text>
-    </view>
-  </view>
-</view>
-
-
-<view class="container">
+<view class="container" hidden='true'>
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
