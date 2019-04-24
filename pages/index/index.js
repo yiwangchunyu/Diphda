@@ -13,7 +13,9 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    content:"",
+    quote:""
   },
   //事件处理函数
   bindViewTap: function() {
@@ -127,6 +129,8 @@ Page({
       })
     }
   },
+
+  //以下为发布页面
   bindPickerChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
@@ -154,6 +158,100 @@ Page({
   submitBtnClick: function (e) {
     wx.switchTab({
       url: '../needs/needs',
+    })
+  },
+  getQuote: function(e){
+    // console.log(e)
+    var val = e.detail.value;
+    this.setData({
+      quote: val
+    });
+  },
+  getContent: function (e) {
+    // console.log(e)
+    var val = e.detail.value;
+    this.setData({
+      content: val
+    });
+  },
+  needSubmit: function() {
+    if (this.data.category_index==0){
+      wx.showModal({
+        title: '提示',
+        showCancel: false,
+        content: '请选择需求类别'
+      });
+      return false
+    }
+    if (this.data.content.length == 0) {
+      wx.showModal({
+        title: '提示',
+        showCancel: false,
+        content: '请输入详细描述'
+      });
+      return false
+    }
+    if (parseFloat(this.data.quote)) {
+      if (parseFloat(this.data.quote)>=0){
+        this.setData({
+          quote_f: parseFloat(this.data.quote)
+        });
+      }else{
+        wx.showModal({
+          title: '提示',
+          showCancel: false,
+          content: '请输入正确的心理价位'
+        });
+        return false
+      }
+    }else{
+      wx.showModal({
+        title: '提示',
+        showCancel: false,
+        content: '请输入正确的心理价位'
+      });
+      return false
+    }
+    
+    var labels=[]
+    for(var i in this.data.labels){
+      if (this.data.labels[i].checked==true){
+        labels.push(this.data.labels[i].value)
+      }
+    }
+    // console.log(this.data.labels)
+    // console.log(labels)
+    // console.log(JSON.stringify(labels))
+    var that=this
+    wx.request({
+      url: app.globalData.domain + '/service/needs/create',
+      data:{
+        user_id: app.globalData.user.id,
+        level: 1,
+        category:this.data.categories[this.data.category_index],
+        tags: JSON.stringify(labels),
+        content:this.data.content,
+        quote:this.data.quote_f
+      },
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success(res){
+        that.setData({
+          category_index: 0,
+          labels: [],
+          label_ids: [],
+          content:"",
+          quote:"",
+          quote_f:-1
+        })
+        that.getNeedsTags();
+        that.getNeedsCategories();
+        wx.switchTab({
+          url: '../needs/needs',
+        })
+      }
     })
   }
 })

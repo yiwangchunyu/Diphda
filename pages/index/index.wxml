@@ -82,7 +82,7 @@
       </view>
     </picker>
     <view class="fb-body">
-      <textarea class="content" placeholder="您的需求详细的描述请写在这里..." />
+      <textarea class="content" bindinput='getContent' placeholder="您的需求详细的描述请写在这里..." value="{{content}}"/>
       <view class="text-count">0/500</view>
     </view>
     
@@ -95,11 +95,11 @@
     </checkbox-group>
 
     <view class="text-line-pub">心理价位:</view>
-    <input class="line-input" type='digit' placeholder="输入心理价位（如：2000）单位：RMB" />
+    <input class="line-input" type='digit' bindinput='getQuote' placeholder="输入心理价位（如：2000）单位：RMB" value="{{quote}}"/>
 
     <view class='bottom-button'>
     <button class='bottom-button-left' type='default'>重置</button>
-    <button class='bottom-button-right' type='primary'>提交</button>
+    <button class='bottom-button-right' type='primary' bindtap='needSubmit'>提交</button>
     </view>
   </view>
 </view>
