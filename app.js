@@ -17,6 +17,6 @@ App({
     userInfo: wx.getStorageSync('userInfo'),
     openid: wx.getStorageSync('openid'),
     user: wx.getStorageSync('user'),
-    domain:'http://diphda.yiwangchunyu.wang'
+    domain:'https://diphda.yiwangchunyu.wang'
   }
 })

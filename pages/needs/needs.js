@@ -29,7 +29,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.getMyNeeds()
   },
 
   /**
@@ -67,8 +67,11 @@ Page({
 
   },
   cardOnClick: function (e) {
+    var need_id = e.target.dataset.id
+    console.log('cardOnClick')
+    console.log(e)
     wx.navigateTo({
-      url: '../need_detail/need_detail',
+      url: '../need_detail/need_detail?need_id=' + need_id,
     })
   },
   getMyNeeds:function(){

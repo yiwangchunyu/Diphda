@@ -7,6 +7,8 @@ Page({
   data: {
     categories: ['请选择需求类别', '类别1', '类别2', '类别3', '类别4'],
     category_index: 0,
+    levels: ['请选择需求级别', '初级场', '中级场', '高级场'],
+    level_index: 0,
     labels: [
       { id: 0, value: 'python' },
       { id: 1, value: 'R语言' },
@@ -80,6 +82,12 @@ Page({
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
       index: e.detail.value
+    })
+  },
+  bindPickerChangeLevels: function (e) {
+    console.log('levels picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      level_index: e.detail.value
     })
   },
   checkChange: function (e) {

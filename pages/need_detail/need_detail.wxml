@@ -1,19 +1,19 @@
 <!--pages/need_detail/need_detail.wxml-->
 <view class='title-view'>
-  <view class='title-line'>需求</view>
-  <label class='title-status-lable'>竞标中</label>
+  <view class='title-line'>{{need.category}}</view>
+  <label class='title-status-lable'>{{need.need_status}}</label>
 </view>
 <view class='labels-view'>
-  <label wx:for="{{labels}}" wx:key="{{item}}" class="labels-lines">
-  <label class="babel-center-item">{{item}}</label>
-</label>
+  <label wx:for="{{need.tags}}" wx:key="{{item}}" class="labels-lines">
+    <label class="babel-center-item">{{item}}</label>
+  </label>
 </view>
 <view class='content-view'>
-  <text class='content-text'>{{content}}</text>
+  <text class='content-text'>{{need.content}}</text>
 </view>
 <view class='text-line-white'>
   <text class='text-line-white-price'>心理价位：</text>
-  <text class='text-line-white-price'>{{price}}</text>
+  <text class='text-line-white-price'>{{need.quote}}</text>
   <text class='text-line-white-pricecny'>¥</text>
 </view>
 <view class='text-line'>参与竞标：</view>

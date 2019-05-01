@@ -83,6 +83,14 @@
         </view>
       </view>
     </picker>
+    <picker bindchange="bindPickerChangeLevels" value="{{level_index}}" range="{{levels}}">
+      <view class="picker">
+        <view class="fb-type">
+          <view class="type-label">{{levels[level_index]}}</view>
+          <image class="type-icon" src="../../images/tobottom.png"></image>
+        </view>
+      </view>
+    </picker>
     <view class="fb-body">
       <textarea class="content" bindinput='getContent' placeholder="您的需求详细的描述请写在这里..." value="{{content}}"/>
       <view class="text-count">0/500</view>

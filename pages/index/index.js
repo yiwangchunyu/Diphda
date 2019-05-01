@@ -10,6 +10,8 @@ Page({
     category_index: 0,
     labels: [ ],
     label_ids: [],
+    levels: ['初级场', '中级场', '高级场'],
+    level_index: 0,
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
@@ -147,6 +149,14 @@ Page({
       category_index: e.detail.value
     })
   },
+
+  bindPickerChangeLevels: function (e) {
+    console.log('level picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      level_index: e.detail.value
+    })
+  },
+
   checkChange: function (e) {
     console.log('radio发生change事件，携带value值为：', e)
     var that = this

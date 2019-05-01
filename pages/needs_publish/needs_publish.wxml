@@ -1,5 +1,5 @@
 <view class="container">
-  <picker bindchange="bindPickerChange" value="{{category_index}}" range="{{categories}}">
+  <picker bindchange="bindPickerChangeLevels" value="{{category_index}}" range="{{levels}}">
     <view class="picker">
       <view class="fb-type">
         <view class="type-label">{{categories[category_index]}}</view>

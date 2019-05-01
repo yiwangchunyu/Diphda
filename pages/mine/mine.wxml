@@ -1,2 +1,53 @@
 <!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<view class='title-line'>个人中心</view>
+<view class='user-view'>
+  <view class='user-avatar-view'>
+    <image class='user-avatar' src='../../images/mine_fill_64.png'></image>
+  </view>
+  <view class='user-info-view'>
+    <view class='user-info-top'>
+      <view class='user-info-username'>壹汪春雨</view>
+      <view class='user-info-level'>level0</view>
+      <view class='user-sign'>签到</view>
+    </view>
+    <view class='user-info-bottom'>
+      <view class='user-info-ability'>能力值：0/500</view>
+      <view class='user-info-coin'>鲸尾币：0</view>
+    </view>
+    
+  </view>
+</view>
+<view class='menu-view'>
+  <view class='menu'>
+    <view class='menu-item'>
+      <view class='menu-text'>消息通知</view>
+      <image class='menu-toright' src='../../images/toright_64.png'></image>
+    </view>
+    <view class='menu-line'></view>
+    <view class='menu-item'>
+      <view class='menu-text'>历史订单</view>
+      <image class='menu-toright' src='../../images/toright_64.png'></image>
+    </view>
+    <view class='menu-line'></view>
+    <view class='menu-item'>
+      <view class='menu-text'>鲸尾商城</view>
+      <image class='menu-toright' src='../../images/toright_64.png'></image>
+    </view>
+  </view>
+  <view class='menu'>
+    <view class='menu-item'>
+      <view class='menu-text'>修改信息</view>
+      <image class='menu-toright' src='../../images/toright_64.png'></image>
+    </view>
+    <view class='menu-line'></view>
+    <view class='menu-item'>
+      <view class='menu-text'>设置</view>
+      <image class='menu-toright' src='../../images/toright_64.png'></image>
+    </view>
+    <view class='menu-line'></view>
+    <view class='menu-item'>
+      <view class='menu-text'>反馈建议</view>
+      <image class='menu-toright' src='../../images/toright_64.png'></image>
+    </view>
+  </view>
+</view>

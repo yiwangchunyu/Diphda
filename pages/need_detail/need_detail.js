@@ -1,4 +1,6 @@
 // pages/need_detail/need_detail.js
+//获取应用实例
+const app = getApp()
 Page({
 
   /**
@@ -14,7 +16,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this
+    var need_id = options.need_id
+    that.setData({
+      need_id: options.need_id
+    })
+    console.log('need_id')
+    console.log(options)
+    this.getNeedDetail(need_id)
   },
 
   /**
@@ -68,6 +77,25 @@ Page({
   solutionCardOnClick: function(e) {
     wx.navigateTo({
       url: '../solution_detail/solution_detail',
+    })
+  },
+  getNeedDetail:function(need_id){
+    var that = this
+    wx.request({
+      url: app.globalData.domain + '/service/needs/show',
+      data: {
+        id: need_id
+      },
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success(res) {
+        console.log(res)
+        that.setData({
+          need: res.data.data[0]
+        })
+      }
     })
   }
 })

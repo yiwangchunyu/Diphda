@@ -1,1 +1,104 @@
 /* pages/mine/mine.wxss */
+page{
+    /* background: #f4f4f4; */
+    background: white;
+}
+
+
+.title-line{
+  background: white;
+  font-size:40rpx;
+  text-align: center;
+}
+
+.user-view{
+  padding: 40rpx;
+  background: white;
+  display: flex;
+  align-items: center;
+}
+.user-view .user-avatar-view{
+  background: white;
+  width: 30%;
+  /* border: 1rpx solid #e6e6ea; */
+}
+
+.user-view .user-avatar-view .user-avatar{
+  height: 200rpx;
+  width: 200rpx;
+  border-radius:50%;
+}
+
+.user-view .user-info-view{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1rpx solid #e6e6ea; */
+}
+
+.user-view .user-info-view .user-info-top{
+  display: flex;
+  align-items: center;
+  padding-bottom: 20rpx;
+  /* border: 1rpx solid #e6e6ea; */
+}
+
+.user-view .user-info-view .user-info-top .user-info-username{
+  font-size: 50rpx;
+  
+}
+
+.user-view .user-info-view .user-info-top .user-info-level{
+  margin: 25rpx;
+  font-size: 35rpx;
+}
+.user-view .user-info-view .user-info-top .user-sign{
+  border: 1rpx solid #2db91b;
+  color: #2db91b;
+  font-size: 30rpx;
+  padding: 5rpx 15rpx;
+  border-radius: 15rpx;
+}
+
+.user-view .user-info-view .user-info-bottom{
+  display: flex;
+  font-size: 30rpx;
+  /* margin: 10rpx; */
+  align-items: center;
+  /* border: 1rpx solid #e6e6ea; */
+}
+
+.user-view .user-info-view .user-info-bottom .user-info-ability{
+  margin-right: 40rpx;
+}
+
+
+.menu-view{
+  background: white;
+  font-size: 37rpx;
+}
+
+.menu-view .menu{
+  margin: 50rpx;
+  padding: 40rpx;
+  border-radius: 20rpx;
+  border: 4rpx solid #e6e6ea;
+}
+
+.menu-view .menu .menu-line{
+  height: 2rpx;
+  /* background:  #e6e6ea; */
+  border-bottom: 1rpx solid #e6e6ea;
+  margin: 20rpx 0;
+}
+.menu-view .menu .menu-item {
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+}
+.menu-view .menu .menu-item .menu-toright{
+  height: 40rpx;
+  width: 40rpx;
+  float: right;
+}
