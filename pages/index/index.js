@@ -259,7 +259,8 @@ Page({
         category:this.data.categories[this.data.category_index],
         tags: JSON.stringify(labels),
         content:this.data.content,
-        quote:this.data.quote_f
+        quote:this.data.quote_f,
+        level:parseInt(this.data.level_index)+1
       },
       method: 'POST',
       header: {
@@ -294,6 +295,7 @@ Page({
       wx.request({
         url: app.globalData.domain + '/service/needs/show',
         data:{
+          level:id
         },
         method: 'POST',
         header: {

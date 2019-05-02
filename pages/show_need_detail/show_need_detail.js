@@ -1,4 +1,6 @@
 // pages/show_need_detail/show_need_detail.js
+//获取应用实例
+const app = getApp()
 Page({
 
   /**
@@ -12,7 +14,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this
+    var need_id = options.need_id
+    that.setData({
+      need_id: options.need_id
+    })
+    console.log('need_id')
+    console.log(options)
+    this.getNeedDetail(need_id)
   },
 
   /**
@@ -62,5 +71,52 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  getNeedDetail: function (need_id) {
+    var that = this
+    wx.request({
+      url: app.globalData.domain + '/service/needs/show',
+      data: {
+        id: need_id
+      },
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success(res) {
+        console.log(res)
+        that.setData({
+          need: res.data.data[0]
+        })
+      }
+    })
+  },
+  startIM: function(){
+    wx.showModal({
+      title: '提示',
+      showCancel: false,
+      content: '功能未开放'
+    });
+  },
+  btnOnClickOrder:function(){
+    if (this.data.need.user_info.openid==app.globalData.openid){
+      wx.showModal({
+        title: '提示',
+        showCancel: false,
+        content: '这是您自己的求助订单'
+      });
+      return false
+    }else{
+      wx.showModal({
+        title: '提示',
+        showCancel: false,
+        content: '抢单成功！',
+        success: function (res) {
+          wx.switchTab({
+            url: '../needs/needs',
+          })
+        }
+      });
+    }
   }
 })

@@ -1,2 +1,33 @@
 <!--pages/show_need_detail/show_need_detail.wxml-->
-<text>pages/show_need_detail/show_need_detail.wxml</text>
+<view class='title-view'>
+  <view class='title-line'>{{need.category}}</view>
+  <label class='title-status-lable'>{{need.need_status}}</label>
+</view>
+<view class='labels-view' >
+    <label class="label-center-item" wx:for="{{need.tags}}" wx:key="{{item}}">{{item}}</label>
+</view>
+<view class='user-view'>
+  <view class='user-avatar-view'>
+    <image class='user-avatar' src='{{need.user_info.avatar}}'></image>
+  </view>
+  <view class='user-info-view'>
+    <view class='user-info-top'>
+      <view class='user-info-username'>{{need.user_info.username}}</view>
+      <view class='user-info-level'>level0</view>
+    </view>
+    <view class='user-info-bottom'>
+      <view class='need-ctime'>{{need.ctime}}</view>
+    </view>
+    
+  </view>
+</view>
+<view class='content-view'>
+  <text class='content-text'>{{need.content}}</text>
+  
+</view>
+<view class='quote'>本单酬金：{{need.quote}}￥</view>
+<view class='bottom-button'>
+  <button class='bottom-button-left' type='default' bindtap='startIM'>沟通</button>
+  <button class='bottom-button-right' type='primary' bindtap='btnOnClickOrder'>抢单</button>
+</view>
+
