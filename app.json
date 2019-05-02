@@ -9,7 +9,9 @@
     "pages/need_detail/need_detail",
     "pages/solution_detail/solution_detail",
     "pages/analyst_plaza/analyst_plaza",
-    "pages/analyst_profile/analyst_profile"
+    "pages/analyst_profile/analyst_profile",
+    "pages/advice/advice",
+    "pages/show_need_detail/show_need_detail"
   ],
   "window": {
     "backgroundTextStyle": "light",

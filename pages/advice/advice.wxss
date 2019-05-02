@@ -1,0 +1,19 @@
+/* pages/advice/advice.wxss */
+.title-line{
+  background: white;
+  font-size:40rpx;
+  text-align: center;
+}
+
+.content-view{
+  margin: 30rpx;
+  padding: 20rpx;
+  border-radius: 20rpx;
+  border: 4rpx solid #e6e6ea;
+}
+
+.bottom-btn{
+  width: 90%;
+  margin-top:50rpx; 
+  text-align: center;
+}

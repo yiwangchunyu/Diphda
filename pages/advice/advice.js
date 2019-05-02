@@ -1,6 +1,4 @@
-// pages/mine/mine.js
-//获取应用实例
-const app = getApp()
+// pages/advice/advice.js
 Page({
 
   /**
@@ -28,25 +26,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    var user_id = app.globalData.user.id
-    // console.log(user_id)
-    var that = this;
-    wx.request({
-      url: app.globalData.domain + '/service/user/show',
-      method: 'POST',
-      data: {
-        user_id: user_id
-      },
-      header: {
-        'content-type': 'application/x-www-form-urlencoded'
-      },
-      success(res) {
-        // console.log(res)
-        that.setData({
-          user:res.data.data
-        })
-      }
-    })
+
   },
 
   /**
@@ -82,10 +62,12 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  onMenuClickAdvice: function(){
-    wx.navigateTo({
-      url: '../advice/advice',
+  }
+  ,
+
+  adviceSubmit: function () {
+    wx.switchTab({
+      url: '../mine/mine',
     })
   }
 })

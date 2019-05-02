@@ -12,7 +12,7 @@ page{
 }
 
 .user-view{
-  padding: 40rpx;
+  padding: 40rpx 60rpx;
   background: white;
   display: flex;
   align-items: center;
@@ -24,8 +24,8 @@ page{
 }
 
 .user-view .user-avatar-view .user-avatar{
-  height: 200rpx;
-  width: 200rpx;
+  height: 180rpx;
+  width: 180rpx;
   border-radius:50%;
 }
 

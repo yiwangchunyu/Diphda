@@ -113,11 +113,11 @@ Page({
   },
   cardOnClick: function(e){
     console.log(e)
-    var need_id=e.target.dataset.id
+    var need_id=e.currentTarget.dataset.id
     console.log(need_id)
-    // wx.navigateTo({
-    //   url: '../need_detail/need_detail?need_id='+need_id,
-    // })
+    wx.navigateTo({
+      url: '../show_need_detail/show_need_detail?need_id='+need_id,
+    })
   },
   /** 
   * 滑动切换tab 

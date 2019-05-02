@@ -8,6 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    currentTab: 0,  
 
   },
 
@@ -67,16 +68,16 @@ Page({
 
   },
   cardOnClick: function (e) {
-    var need_id = e.target.dataset.id
-    console.log('cardOnClick')
-    console.log(e)
+    var need_id = e.currentTarget.dataset.id
+    // console.log('cardOnClick')
+    // console.log(e)
     wx.navigateTo({
       url: '../need_detail/need_detail?need_id=' + need_id,
     })
   },
   getMyNeeds:function(){
     var user_id=app.globalData.user.id
-    console.log(user_id)
+    // console.log(user_id)
     var that=this
     wx.request({
       url: app.globalData.domain + '/service/needs/show',
@@ -88,11 +89,38 @@ Page({
         'content-type': 'application/x-www-form-urlencoded'
       },
       success(res) {
-        console.log(res)
+        // console.log(res)
         that.setData({
           needs_list: res.data.data
         })
       }
     })
+  },
+  switchTopTab: function (e) {
+    var that = this;
+    // console.log(e)
+    if (this.data.currentTab === e.target.dataset.current) {
+      return false;
+    } else {
+      this.switchTopTabTo(e.target.dataset.current)
+      that.setData({
+        currentTab: e.target.dataset.current
+      })
+    }
+  },
+  switchTopTabTo:function(id){
+    var that=this
+    if(id==0){
+      this.getMyNeeds()
+    }
+    else if(id==1){
+      that.setData({
+        needs_list: []
+      })
+    }
+    else{
+
+    }
+
   }
 })

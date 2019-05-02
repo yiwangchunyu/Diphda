@@ -2,11 +2,11 @@
 <view class='title-line'>个人中心</view>
 <view class='user-view'>
   <view class='user-avatar-view'>
-    <image class='user-avatar' src='../../images/mine_fill_64.png'></image>
+    <image class='user-avatar' src='{{user.avatar}}'></image>
   </view>
   <view class='user-info-view'>
     <view class='user-info-top'>
-      <view class='user-info-username'>壹汪春雨</view>
+      <view class='user-info-username'>{{user.username}}</view>
       <view class='user-info-level'>level0</view>
       <view class='user-sign'>签到</view>
     </view>
@@ -45,7 +45,7 @@
       <image class='menu-toright' src='../../images/toright_64.png'></image>
     </view>
     <view class='menu-line'></view>
-    <view class='menu-item'>
+    <view class='menu-item' bindtap='onMenuClickAdvice'>
       <view class='menu-text'>反馈建议</view>
       <image class='menu-toright' src='../../images/toright_64.png'></image>
     </view>
