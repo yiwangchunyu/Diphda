@@ -20,14 +20,14 @@
     <text class='card-content'>{{need.content}}</text>
     <text class='card-price'>心理价位：</text>
     <text class='card-price_num'>200</text>
-    <text class='card-price_cny'>¥</text>
+    <text class='card-price_cny'>鲸尾币</text>
 
     <view class='card-label'>
       <!-- <label class='card-label-msgcount'>3</label> -->
       <label class='card-label-item'>R语言</label>
       <label class='card-label-item'>python</label>
     </view>
-    <label class='card-status-label'>{{need.need_status}}</label>
+    <label class='card-status-label  status{{need.need_stat}}'>{{need.need_status}}</label>
     <image class='card-status-toright' src='../../images/toright_64.png'></image>
 
     <view class='card-members'>

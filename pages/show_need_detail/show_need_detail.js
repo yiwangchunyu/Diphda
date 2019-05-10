@@ -107,16 +107,52 @@ Page({
       });
       return false
     }else{
-      wx.showModal({
-        title: '提示',
-        showCancel: false,
-        content: '抢单成功！',
-        success: function (res) {
-          wx.switchTab({
-            url: '../needs/needs',
+      var user_id = app.globalData.user.id
+      // console.log(user_id)
+      var that = this
+      wx.request({
+        url: app.globalData.domain + '/service/needs/createOrder',
+        data: {
+          user_id: user_id,
+          need_id:this.data.need_id
+        },
+        method: 'POST',
+        header: {
+          'content-type': 'application/x-www-form-urlencoded'
+        },
+        success(res) {
+          console.log('抢单结果')
+          console.log(res)
+          if(res.data.code==0){
+            wx.showModal({
+              title: '提示',
+              showCancel: false,
+              content: '抢单成功！',
+              success: function (res) {
+                wx.switchTab({
+                  url: '../needs/needs',
+                })
+              }
+            });
+          }else{
+            wx.showModal({
+              title: '提示',
+              showCancel: false,
+              content: res.data.msg,
+              success: function (res) {
+                wx.switchTab({
+                  url: '../index/index',
+                })
+              }
+            });
+          }
+          // console.log(res)
+          that.setData({
+            needs_list: res.data.data
           })
         }
-      });
+      })
+      
     }
   }
 })

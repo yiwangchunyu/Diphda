@@ -30,7 +30,8 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.getMyNeeds()
+    this.switchTopTabTo(this.data.currentTab)
+    
   },
 
   /**
@@ -71,9 +72,16 @@ Page({
     var need_id = e.currentTarget.dataset.id
     // console.log('cardOnClick')
     // console.log(e)
-    wx.navigateTo({
-      url: '../need_detail/need_detail?need_id=' + need_id,
-    })
+    if(this.data.currentTab==1){
+      wx.navigateTo({
+        url: '../solution_editor/solution_editor?need_id=' + need_id,
+      })
+    }else{
+      wx.navigateTo({
+        url: '../need_detail/need_detail?need_id=' + need_id,
+      })
+    }
+ 
   },
   getMyNeeds:function(){
     var user_id=app.globalData.user.id
@@ -83,6 +91,27 @@ Page({
       url: app.globalData.domain + '/service/needs/show',
       data: {
         user_id:user_id
+      },
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success(res) {
+        // console.log(res)
+        that.setData({
+          needs_list: res.data.data
+        })
+      }
+    })
+  },
+  getMyOrders: function () {
+    var user_id = app.globalData.user.id
+    // console.log(user_id)
+    var that = this
+    wx.request({
+      url: app.globalData.domain + '/service/needs/listOrder',
+      data: {
+        user_id: user_id
       },
       method: 'POST',
       header: {
@@ -114,9 +143,7 @@ Page({
       this.getMyNeeds()
     }
     else if(id==1){
-      that.setData({
-        needs_list: []
-      })
+      this.getMyOrders()
     }
     else{
 

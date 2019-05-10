@@ -49,7 +49,7 @@
       <text class='card-content'>{{need.content}}</text>
       <text class='card-price'>心理价位：</text>
       <text class='card-price_num'>{{need.quote}}</text>
-      <text class='card-price_cny'>¥</text>
+      <text class='card-price_cny'>鲸尾币</text>
 
       <!-- <view class='card-label' wx:for="{{need.tags}}" wx:for-item="tag" wx:key="*this"> -->
       <view class='card-label' >
@@ -57,7 +57,7 @@
         <label class='card-label-item'>pandas</label>
         <label class='card-label-item'>sklearn</label>
       </view>
-      <label class='card-status-label'>{{need.need_status}}</label>
+      <label class='card-status-label status{{need.need_stat}}'>{{need.need_status}}</label>
       <image class='card-status-toright' src='../../images/toright_64.png'></image>
 
       <view class='card-members'>
@@ -108,8 +108,8 @@
     <input class="line-input" type='digit' bindinput='getQuote' placeholder="输入心理价位（如：2000）单位：RMB" value="{{quote}}"/>
 
     <view class='bottom-button'>
-    <button class='bottom-button-left' type='default'>重置</button>
-    <button class='bottom-button-right' type='primary' bindtap='needSubmit'>提交</button>
+      <button class='bottom-button-left' type='default'>重置</button>
+      <button class='bottom-button-right' type='primary' bindtap='needSubmit'>提交</button>
     </view>
   </view>
 </view>

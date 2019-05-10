@@ -1,0 +1,29 @@
+
+<view class='title-view'>
+  <view class='title-line'>{{need.category}}</view>
+  <label class='title-status-lable status{{need.need_stat}}'>{{need.need_status}}</label>
+</view>
+<view class='labels-view'>
+  <label wx:for="{{need.tags}}" wx:key="{{item}}" class="labels-lines">
+    <label class="babel-center-item">{{item}}</label>
+  </label>
+</view>
+<view class='content-view'>
+  <text class='content-text'>{{need.content}}</text>
+</view>
+<view class='text-line-white'>
+  <text class='text-line-white-price'>心理价位：</text>
+  <text class='text-line-white-price'>{{need.quote}}</text>
+  <text class='text-line-white-pricecny'>鲸尾币</text>
+</view>
+<view class='text-line'>请填写解决方案：</view>
+<view class="fb-body">
+  <textarea class="content"bindinput='getContent' placeholder="您的解决方案的描述请写在这里..." value="{{solution.content}}"/>
+  <view class="text-count">0/500</view>
+</view>
+<view class='bottom-view'>
+  <view class='bottom-button'>
+    <button class='bottom-button-left' type='default' bindtap='btnGiveup'>放弃解答</button>
+    <button class='bottom-button-right' type='primary' bindtap='btnSubmit'>提交方案</button>
+  </view>
+</view>

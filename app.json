@@ -5,13 +5,13 @@
     "pages/logs/logs",
     "pages/mine/mine",
     "pages/needs/needs",
-    "pages/needs_publish/needs_publish",
     "pages/need_detail/need_detail",
     "pages/solution_detail/solution_detail",
     "pages/analyst_plaza/analyst_plaza",
     "pages/analyst_profile/analyst_profile",
     "pages/advice/advice",
-    "pages/show_need_detail/show_need_detail"
+    "pages/show_need_detail/show_need_detail",
+    "pages/solution_editor/solution_editor"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -34,7 +34,7 @@
         "selectedIconPath": "images/order_fill_64.png",
         "iconPath": "images/order_64.png",
         "pagePath": "pages/needs/needs",
-        "text": "需求"
+        "text": "互助"
       },
       {
         "selectedIconPath": "images/people_fill_64.png",
@@ -43,5 +43,6 @@
         "text": "我的"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

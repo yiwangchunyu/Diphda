@@ -32,6 +32,22 @@ page{
   font-size:18rpx;
 }
 
+.status0{
+  background: rgb(255, 8, 0);
+}
+
+.status1{
+  background: rgb(85, 185, 76);
+}
+
+.status2{
+  background: rgb(248, 175, 80);
+}
+
+.status3{
+  background: rgb(0, 144, 201);
+}
+
 .labels-view{
   width: 100%;
   /* margin: 10rpx; */
