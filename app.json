@@ -11,7 +11,8 @@
     "pages/analyst_profile/analyst_profile",
     "pages/advice/advice",
     "pages/show_need_detail/show_need_detail",
-    "pages/solution_editor/solution_editor"
+    "pages/solution_editor/solution_editor",
+    "pages/solution_check/solution_check"
   ],
   "window": {
     "backgroundTextStyle": "light",

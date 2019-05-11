@@ -78,7 +78,7 @@ Page({
       })
     }else{
       wx.navigateTo({
-        url: '../need_detail/need_detail?need_id=' + need_id,
+        url: '../solution_check/solution_check?need_id=' + need_id,
       })
     }
  

@@ -1,0 +1,29 @@
+
+<view class='title-view'>
+  <view class='title-line'>{{need.category}}</view>
+  <label class='title-status-lable status{{need.need_stat}}'>{{need.need_status}}</label>
+</view>
+<view class='labels-view'>
+  <label wx:for="{{need.tags}}" wx:key="{{item}}" class="labels-lines">
+    <label class="babel-center-item">{{item}}</label>
+  </label>
+</view>
+<view class='content-view'>
+  <text class='content-text'>{{need.content}}</text>
+</view>
+<view class='text-line-white'>
+  <text class='text-line-white-price'>心理价位：</text>
+  <text class='text-line-white-price'>{{need.quote}}</text>
+  <text class='text-line-white-pricecny'>鲸尾币</text>
+</view>
+<view class='text-line'>解决方案：</view>
+<view class="fb-body">
+  <textarea class="content" disabled='true' bindinput='getContent' placeholder="您的问题还没有被解答..." value="{{solution.content}}"/>
+  <view class="text-count">0/500</view>
+</view>
+<view class='bottom-view'>
+  <view class='bottom-button'>
+    <button class='bottom-button-left' disabled="{{(need.need_stat==0||need.need_stat==4)?true:false}}" type='default' bindtap='btnGiveup'>撤销互助</button>
+    <button class='bottom-button-right' disabled="{{(need.need_stat<=1||need.need_stat==4)?true:false}}" type='primary' bindtap='btnSubmit'>确认结单</button>
+  </view>
+</view>

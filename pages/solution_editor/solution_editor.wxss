@@ -48,6 +48,10 @@ page{
   background: rgb(0, 144, 201);
 }
 
+.status4{
+  background: rgb(201, 32, 252);
+}
+
 .labels-view{
   width: 100%;
   padding: 10rpx;
