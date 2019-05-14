@@ -18,7 +18,7 @@
   <view class='card' bindtap='cardOnClick' bindtap='cardOnClick'  data-id="{{need.need_id}}">
     <text class='card-category'>{{need.category}}</text>
     <text class='card-content'>{{need.content}}</text>
-    <text class='card-price'>心理价位：</text>
+    <text class='card-price'>酬金：</text>
     <text class='card-price_num'>{{need.quote}}</text>
     <text class='card-price_cny'>¥</text>
 
@@ -30,7 +30,7 @@
     <label class='card-status-label  status{{need.need_stat}}'>{{need.need_status}}</label>
     <image class='card-status-toright' src='../../images/toright_64.png'></image>
 
-    <view class='card-members'>
+    <view hidden='true' class='card-members'>
       <text class='card-members-count'>3人</text>
       <view class='card-members-avatars'>
         <image class='card-members-avatars-item' src='../../images/mine_fill_64.png'></image>

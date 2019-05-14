@@ -12,7 +12,7 @@
   <text class='content-text'>{{need.content}}</text>
 </view>
 <view class='text-line-white'>
-  <text class='text-line-white-price'>心理价位：</text>
+  <text class='text-line-white-price'>酬金：</text>
   <text class='text-line-white-price'>{{need.quote}}</text>
   <text class='text-line-white-pricecny'>¥</text>
 </view>
