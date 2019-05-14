@@ -20,7 +20,7 @@
     <text class='card-content'>{{need.content}}</text>
     <text class='card-price'>心理价位：</text>
     <text class='card-price_num'>{{need.quote}}</text>
-    <text class='card-price_cny'>鲸尾币</text>
+    <text class='card-price_cny'>¥</text>
 
     <view class='card-label'>
       <!-- <label class='card-label-msgcount'>3</label> -->

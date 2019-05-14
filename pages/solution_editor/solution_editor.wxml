@@ -14,7 +14,7 @@
 <view class='text-line-white'>
   <text class='text-line-white-price'>心理价位：</text>
   <text class='text-line-white-price'>{{need.quote}}</text>
-  <text class='text-line-white-pricecny'>鲸尾币</text>
+  <text class='text-line-white-pricecny'>¥</text>
 </view>
 <view class='text-line'>请填写解决方案：</view>
 <view class="fb-body">
