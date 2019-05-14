@@ -150,7 +150,7 @@ page{
 
 .card-status{
   position: absolute;
-  bottom: 80rpx; right: 0px; 
+  bottom: 22rpx; right: 0px; 
   display: flex;
   align-items: center;
   /* justify-content: right; */
@@ -160,7 +160,7 @@ page{
   padding: 10rpx;
   border: 1rpx solid #e6e6ea;
   border-radius: 4px;
-  font-size:18rpx;
+  font-size:20rpx;
 }
 
 .status0{
