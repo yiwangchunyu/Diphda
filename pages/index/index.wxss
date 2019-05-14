@@ -148,13 +148,18 @@ page{
 }
 
 
-.card-status-label{
+.card-status{
   position: absolute;
-  bottom: 80rpx;right: 50rpx;
+  bottom: 80rpx; right: 0px; 
+  display: flex;
+  align-items: center;
+  /* justify-content: right; */
+}
+
+.card-status-label{
   padding: 10rpx;
   border: 1rpx solid #e6e6ea;
   border-radius: 4px;
-  /* background: rgb(85, 185, 76); */
   font-size:18rpx;
 }
 
@@ -179,8 +184,7 @@ page{
 }
 
 .card-status-toright{
-  position: absolute;
-  bottom: 80rpx; right: 0px; 
+  
   width: 25px;
   height: 25px;
 }

@@ -27,9 +27,11 @@
       <label class='card-label-item'>R语言</label>
       <label class='card-label-item'>python</label>
     </view>
-    <label class='card-status-label  status{{need.need_stat}}'>{{need.need_status}}</label>
-    <image class='card-status-toright' src='../../images/toright_64.png'></image>
-
+    <view class='card-status'>
+      <label class='card-status-label  status{{need.need_stat}}'>{{need.need_status}}</label>
+      <image class='card-status-toright' src='../../images/toright_64.png'></image>
+    </view>
+    
     <view hidden='true' class='card-members'>
       <text class='card-members-count'>3人</text>
       <view class='card-members-avatars'>
