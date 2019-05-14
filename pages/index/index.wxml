@@ -54,8 +54,8 @@
       <!-- <view class='card-label' wx:for="{{need.tags}}" wx:for-item="tag" wx:key="*this"> -->
       <view class='card-label' >
         <!-- <label class='card-label-item'>{{tag}}</label> -->
-        <label class='card-label-item'>pandas</label>
-        <label class='card-label-item'>sklearn</label>
+        <!-- <label class='card-label-item'>pandas</label> -->
+        <label class='card-label-item' wx:for="{{need.tags}}" wx:for-item="tag" wx:key="*this">{{tag}}</label>
       </view>
       <view class='card-status'>
         <label class='card-status-label status{{need.need_stat}}'>{{need.need_status}}</label>
