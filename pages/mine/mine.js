@@ -87,5 +87,17 @@ Page({
     wx.navigateTo({
       url: '../advice/advice',
     })
+  },
+  unOpen:function(){
+    wx.showModal({
+      title: '提示',
+      showCancel: false,
+      content: '功能未开放'
+    });
+  },
+  history: function () {
+    wx.switchTab({
+      url: '../needs/needs',
+    })
   }
 })

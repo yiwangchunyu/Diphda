@@ -19,28 +19,28 @@
 </view>
 <view class='menu-view'>
   <view class='menu'>
-    <view class='menu-item'>
+    <view class='menu-item' bindtap='unOpen'>
       <view class='menu-text'>消息通知</view>
       <image class='menu-toright' src='../../images/toright_64.png'></image>
     </view>
     <view class='menu-line'></view>
-    <view class='menu-item'>
+    <view class='menu-item' bindtap='history'>
       <view class='menu-text'>历史订单</view>
       <image class='menu-toright' src='../../images/toright_64.png'></image>
     </view>
     <view class='menu-line'></view>
-    <view class='menu-item'>
+    <view class='menu-item' bindtap='unOpen'>
       <view class='menu-text'>鲸尾商城</view>
       <image class='menu-toright' src='../../images/toright_64.png'></image>
     </view>
   </view>
   <view class='menu'>
-    <view class='menu-item'>
+    <view class='menu-item' bindtap='unOpen'>
       <view class='menu-text'>修改信息</view>
       <image class='menu-toright' src='../../images/toright_64.png'></image>
     </view>
     <view class='menu-line'></view>
-    <view class='menu-item'>
+    <view class='menu-item'  bindtap='unOpen'>
       <view class='menu-text'>设置</view>
       <image class='menu-toright' src='../../images/toright_64.png'></image>
     </view>
