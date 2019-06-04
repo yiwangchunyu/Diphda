@@ -1,0 +1,61 @@
+/* pages/profile_update/profile_update.wxss */
+.title-line{
+  background: white;
+  font-size:40rpx;
+  text-align: center;
+}
+
+.containner{
+  padding: 30rpx;
+}
+
+.bottom-btn{
+  width: 90%;
+  margin-top:50rpx; 
+  text-align: center;
+}
+
+.fb-type{
+  height: 100rpx;
+  width: 90%;
+  background: #fff;
+  margin-bottom: 10rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+
+.fb-type .type-label{
+  height: 30rpx;
+  flex: 1;
+  color: #333;
+  /* background: #f4f4f4; */
+  font-size: 30rpx;
+}
+
+.fb-type .type-icon{
+  height: 30rpx;
+  width: 30rpx;
+}
+.text-line-pub{
+  width: 100%;
+  padding-top: 20rpx;
+  padding-bottom: 10rpx;
+  color: #7f7f7f;
+  font-size: 30rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  line-height: 33rpx;
+} 
+
+.line-input{
+  width: 100%;
+  height: 70rpx;
+  /* padding-left: 20rpx; */
+  font-size: 25rpx;
+  background: white;
+  border: 1rpx solid #e6e6ea;
+  border-radius: 5px;
+}

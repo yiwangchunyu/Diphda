@@ -35,7 +35,7 @@
     </view>
   </view>
   <view class='menu'>
-    <view class='menu-item' bindtap='unOpen'>
+    <view class='menu-item' bindtap='onMenuClickProfileUpdate'>
       <view class='menu-text'>修改信息</view>
       <image class='menu-toright' src='../../images/toright_64.png'></image>
     </view>

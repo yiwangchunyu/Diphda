@@ -1,0 +1,17 @@
+<!--pages/profile_update/profile_update.wxml-->
+<view class='title-line'>信息修改</view>
+<view class='containner'>
+  <picker bindchange="bindPickerChange" value="{{contact_type}}" range="{{contact_type}}">
+    <view class="picker">
+      <view class="fb-type">
+        <view class="type-label">{{contact_type[contact_index]}}</view>
+        <image class="type-icon" src="../../images/tobottom.png"></image>
+      </view>
+    </view>
+  </picker>
+  <view class="text-line-pub">请填写{{contact_type[contact_index]}}:</view>
+  <input class="line-input" bindinput='getContact' placeholder="" value="{{quote}}"/>
+</view>
+
+
+<button class='bottom-btn' type='primary' bindtap='onSubmit'>确认修改</button>

@@ -88,6 +88,11 @@ Page({
       url: '../advice/advice',
     })
   },
+  onMenuClickProfileUpdate: function () {
+    wx.navigateTo({
+      url: '../profile_update/profile_update',
+    })
+  },
   unOpen:function(){
     wx.showModal({
       title: '提示',

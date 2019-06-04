@@ -12,7 +12,8 @@
     "pages/advice/advice",
     "pages/show_need_detail/show_need_detail",
     "pages/solution_editor/solution_editor",
-    "pages/solution_check/solution_check"
+    "pages/solution_check/solution_check",
+    "pages/profile_update/profile_update"
   ],
   "window": {
     "backgroundTextStyle": "light",
