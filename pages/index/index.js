@@ -308,6 +308,10 @@ Page({
           })
         }
       })
+    } else if ((!app.globalData.user.contact) || (app.globalData.user.contact.length==0)){
+      wx.navigateTo({
+        url: '../profile_update/profile_update',
+      })
     }
   }
 })

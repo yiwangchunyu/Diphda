@@ -104,8 +104,10 @@ Page({
         'content-type': 'application/x-www-form-urlencoded'
       },
       success(res) {
-        console.log("user update")
-        console.log(res)
+        // console.log("user update")
+        // console.log(res)
+        app.globalData.user.contact = that.data.contact
+        app.globalData.user.contact_type = that.data.contact_type[that.data.contact_index]
         wx.switchTab({
           url: '../mine/mine',
         })
