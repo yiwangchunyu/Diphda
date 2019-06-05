@@ -49,7 +49,7 @@
       <text class='card-content'>{{need.content}}</text>
       <text class='card-price'>酬金：</text>
       <text class='card-price_num'>{{need.quote}}</text>
-      <text class='card-price_cny'>鲸尾币</text>
+      <text class='card-price_cny'>¥</text>
 
       <!-- <view class='card-label' wx:for="{{need.tags}}" wx:for-item="tag" wx:key="*this"> -->
       <view class='card-label' >
