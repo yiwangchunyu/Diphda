@@ -10,7 +10,7 @@
     </view>
   </picker>
   <view class="text-line-pub">请填写{{contact_type[contact_index]}}:</view>
-  <input class="line-input" bindinput='getContact' placeholder="" value="{{quote}}"/>
+  <input class="line-input" bindinput='getContact' placeholder="" value="{{user.contact}}"/>
 </view>
 
 

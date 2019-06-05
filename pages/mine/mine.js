@@ -47,6 +47,23 @@ Page({
         })
       }
     })
+
+    wx.request({
+      url: app.globalData.domain + '/service/userext/get',
+      method: 'POST',
+      data: {
+        user_id: user_id
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success(res) {
+        // console.log(res)
+        that.setData({
+          userext: res.data.data
+        })
+      }
+    })
   },
 
   /**
@@ -103,6 +120,27 @@ Page({
   history: function () {
     wx.switchTab({
       url: '../needs/needs',
+    })
+  },
+  getUserext: function(){
+    var user_id = app.globalData.user.id
+    // console.log(user_id)
+    var that = this;
+    wx.request({
+      url: app.globalData.domain + '/service/userext/get',
+      method: 'POST',
+      data: {
+        user_id: user_id
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success(res) {
+        // console.log(res)
+        that.setData({
+          userext: res.data.data
+        })
+      }
     })
   }
 })

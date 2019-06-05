@@ -11,7 +11,7 @@
       <view class='user-sign'>签到</view>
     </view>
     <view class='user-info-bottom'>
-      <view class='user-info-ability'>能力值：0/500</view>
+      <view class='user-info-ability'>经验值：{{userext.expc}}</view>
       <view class='user-info-coin'>鲸尾币：0</view>
     </view>
     

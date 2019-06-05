@@ -11,6 +11,7 @@ Page({
       '微信号','qq号','邮箱','手机号'
     ],
     contact_index:0,
+    user:app.globalData.user
 
   },
 
